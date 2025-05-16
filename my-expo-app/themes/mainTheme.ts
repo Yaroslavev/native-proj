@@ -1,0 +1,241 @@
+import { StyleSheet } from 'react-native';
+
+export const theme = {
+  colors: {
+    primary: '#007AFF',
+    accent: '#34C759',
+    background: '#f5f5f5',
+    card: '#fff',
+    text: '#333',
+    error: '#FF3B30',
+    secondaryText: '#666',
+    placeholder: '#999',
+    white: '#fff',
+    inputBackground: '#f9f9f9',
+    border: '#ddd',
+  },
+  spacing: {
+    small: 10,
+    medium: 20,
+    large: 30,
+  },
+};
+
+export const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+    backgroundColor: theme.colors.background,
+    padding: 20,
+    justifyContent: 'center',
+  },
+  form: {
+    backgroundColor: theme.colors.card,
+    borderRadius: 12,
+    padding: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 5,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: '700',
+    color: theme.colors.text,
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: theme.colors.secondaryText,
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  imagePicker: {
+    alignSelf: 'center',
+    marginBottom: 20,
+  },
+  image: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    borderWidth: 2,
+    borderColor: theme.colors.primary,
+  },
+  imagePlaceholder: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: '#f0f0f0',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+  },
+  imageText: {
+    fontSize: 14,
+    color: theme.colors.secondaryText,
+    marginTop: 5,
+    textAlign: 'center',
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: theme.colors.inputBackground,
+    borderRadius: 8,
+    marginBottom: 12,
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+  },
+  icon: {
+    marginRight: 10,
+  },
+  input: {
+    flex: 1,
+    height: 50,
+    fontSize: 16,
+    color: theme.colors.text,
+  },
+  error: {
+    fontSize: 14,
+    color: theme.colors.error,
+    marginBottom: 10,
+    marginLeft: 10,
+  },
+  button: {
+    backgroundColor: theme.colors.primary,
+    borderRadius: 8,
+    paddingVertical: 14,
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  buttonDisabled: {
+    backgroundColor: '#99C2FF',
+  },
+  buttonText: {
+    fontSize: 18,
+    color: theme.colors.white,
+    fontWeight: '600',
+  },
+  loginLink: {
+    marginTop: 20,
+    alignItems: 'center',
+  },
+  loginText: {
+    fontSize: 16,
+    color: theme.colors.primary,
+  },
+  linkContainer: {
+    marginTop: 20,
+    alignItems: 'center',
+  },
+  linkText: {
+    fontSize: 16,
+    color: theme.colors.primary,
+    textAlign: 'center',
+  },
+  linkTextSecondary: {
+    fontSize: 16,
+    color: theme.colors.text,
+    textAlign: 'center',
+  },
+  linkHighlight: {
+    color: theme.colors.primary,
+    fontWeight: '600',
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: theme.spacing.medium,
+  },
+  card: {
+    backgroundColor: theme.colors.card,
+    borderRadius: 12,
+    padding: 15,
+    marginBottom: theme.spacing.small,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 3,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  cardIcon: {
+    marginRight: 15,
+  },
+  cardTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: theme.colors.text,
+  },
+  cardSubtitle: {
+    fontSize: 14,
+    color: theme.colors.secondaryText,
+    marginTop: 5,
+  },
+  avatarContainer: {
+    alignItems: 'center',
+    marginBottom: theme.spacing.medium,
+  },
+  avatar: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    borderWidth: 3,
+    borderColor: theme.colors.primary,
+  },
+  username: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: theme.colors.text,
+    marginTop: 10,
+  },
+  infoCard: {
+    backgroundColor: theme.colors.card,
+    borderRadius: 12,
+    padding: 15,
+    marginBottom: theme.spacing.small,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 3,
+  },
+  infoLabel: {
+    fontSize: 14,
+    color: theme.colors.secondaryText,
+    marginBottom: 5,
+  },
+  infoValue: {
+    fontSize: 16,
+    color: theme.colors.text,
+    fontWeight: '500',
+  },
+  passwordContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  centerTextField: {
+    top: theme.spacing.small,
+  },
+  cardImage: {
+    width: 60,
+    height: 60,
+    borderRadius: 8,
+    marginRight: 12,
+  },
+  cardContent: {
+    flex: 1,
+  },
+  cardDescription: {
+    fontSize: 14,
+    color: theme.colors.secondaryText,
+  },
+  cardActions: {
+    flexDirection: 'row',
+  },
+});
