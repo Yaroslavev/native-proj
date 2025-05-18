@@ -14,6 +14,8 @@ export default function Layout() {
         <Stack.Screen name="profile/settings" options={{ title: "Налаштування" }} />
         <Stack.Screen name="categories/index" options={{ title: 'Категорії' }} />
         <Stack.Screen name="categories/form" options={{ title: 'Форма категорій' }} />
+        <Stack.Screen name="dishes/index" options={{ title: "Страви" }} />
+        <Stack.Screen name="dishes/form" options={{ title: "Форма страв" }} />
       </Stack>
     </Provider>
   );

@@ -7,6 +7,7 @@ namespace backend.Data
     public class DbContextBackend : IdentityDbContext<UserEntity, RoleEntity, long>
     {
         public DbSet<CategoryEntity> Categories { get; set; }
+        public DbSet<DishEntity> Dishes { get; set; }
 
         public DbContextBackend(DbContextOptions<DbContextBackend> options) : base(options) { }
 

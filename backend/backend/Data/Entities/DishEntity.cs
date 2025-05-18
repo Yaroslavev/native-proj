@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace backend.Data.Entities
 {
-    public class CategoryEntity
+    public class DishEntity
     {
         [Key]
         public long Id { get; set; }
@@ -11,12 +11,11 @@ namespace backend.Data.Entities
         public string Name { get; set; } = string.Empty;
         [StringLength(1000)]
         public string Description { get; set; } = string.Empty;
-        [StringLength(100)]
-        public string? Image { get; set; }
+        public decimal Price { get; set; } = 0;
 
-        [ForeignKey("User")]
-        public long UserId { get; set; }
-        public virtual UserEntity? User { get; set; }
-        public virtual ICollection<DishEntity>? Dishes { get; set; }
+        public IEnumerable<string>? Images { get; set; }
+        [ForeignKey("Category")]
+        public long CategoryId { get; set; }
+        public virtual CategoryEntity? Category { get; set; }
     }
 }

@@ -238,4 +238,34 @@ export const styles = StyleSheet.create({
   cardActions: {
     flexDirection: 'row',
   },
+  imagePreview: {
+    position: 'relative',
+    marginLeft: 10,
+  },
+  removeImage: {
+    position: 'absolute',
+    top: 5,
+    right: 5,
+    backgroundColor: theme.colors.error,
+    borderRadius: 12,
+    padding: 2,
+  },
+  pickerContainer: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+    borderRadius: 8,
+  },
+  picker: {
+    height: 60,
+    color: theme.colors.text,
+  },
+  label: {
+    fontSize: 16,
+    color: theme.colors.text,
+    marginBottom: 8,
+  },
+  topSmallMargin: {
+    marginTop: theme.spacing.small,
+  },
 });

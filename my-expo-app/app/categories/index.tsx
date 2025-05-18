@@ -45,6 +45,11 @@ export default function CategoriesScreen() {
     );
   };
 
+  const handleNavigateToDishes = (categoryId: number) => {
+      console.log(`Navigating to dishes for category ${categoryId}`);
+      router.push(`/dishes?categoryId=${categoryId}`);
+  };
+
   if (isLoading) {
     return (
       <View style={styles.container}>
@@ -80,33 +85,39 @@ export default function CategoriesScreen() {
         data={categories}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
-          <Animated.View entering={FadeInDown.duration(600).delay(100)} style={styles.card}>
-            {item.image && (
-              <Image
-                source={{ uri: IMAGE_URL + '200_' + item.image }}
-                style={styles.cardImage}
-              />
-            )}
-            <View style={styles.cardContent}>
-              <Text style={styles.cardTitle}>{item.name}</Text>
-              <Text style={styles.cardDescription}>{item.description || 'Без опису'}</Text>
-            </View>
-            <View style={styles.cardActions}>
-              <TouchableOpacity
-                onPress={() => router.push(`/categories/form?id=${item.id}`)}
-                style={{ padding: 10 }}
-                disabled={isDeleting}
-              >
-                <Icon name="edit" size={24} color={theme.colors.primary} />
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => handleDelete(item.id, item.name)}
-                style={{ padding: 10 }}
-                disabled={isDeleting}
-              >
-                <Icon name="delete" size={24} color={theme.colors.error} />
-              </TouchableOpacity>
-            </View>
+            <Animated.View entering={FadeInDown.duration(600).delay(100)} style={styles.card}>
+                <TouchableOpacity
+                    style={styles.card}
+                    onPress={() => handleNavigateToDishes(item.id)}
+                    disabled={isDeleting}
+                >
+                    {item.image && (
+                        <Image
+                            source={{ uri: IMAGE_URL + '200_' + item.image }}
+                            style={styles.cardImage}
+                        />
+                    )}
+                    <View style={styles.cardContent}>
+                        <Text style={styles.cardTitle}>{item.name}</Text>
+                        <Text style={styles.cardDescription}>{item.description || 'Без опису'}</Text>
+                    </View>
+                    <View style={styles.cardActions}>
+                        <TouchableOpacity
+                            onPress={() => router.push(`/categories/form?id=${item.id}`)}
+                            style={{ padding: 10 }}
+                            disabled={isDeleting}
+                        >
+                            <Icon name="edit" size={24} color={theme.colors.primary} />
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={() => handleDelete(item.id, item.name)}
+                            style={{ padding: 10 }}
+                            disabled={isDeleting}
+                        >
+                            <Icon name="delete" size={24} color={theme.colors.error} />
+                        </TouchableOpacity>
+                    </View>
+                </TouchableOpacity>
           </Animated.View>
         )}
         ListEmptyComponent={
